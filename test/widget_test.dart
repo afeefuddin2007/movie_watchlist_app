@@ -5,26 +5,23 @@
 // gestures. You can also use WidgetTester to find child widgets in the widget
 // tree, read text, and verify that the values of widget properties are correct.
 
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:movie_watchlist_app/main.dart';
+import 'package:cw02_movie_watchlist/main.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+  testWidgets('movie card opens its details', (WidgetTester tester) async {
+    await tester.pumpWidget(const MovieWatchlistApp());
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    expect(find.text('Movie Watchlist'), findsOneWidget);
+    expect(find.text('Neon Horizon'), findsOneWidget);
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+    await tester.tap(find.text('Neon Horizon'));
+    await tester.pumpAndSettle();
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    expect(find.text('Neon Horizon'), findsNWidgets(2));
+    expect(find.text('Synopsis'), findsOneWidget);
+    expect(find.text('Cast'), findsOneWidget);
+    expect(find.text('Maya Cross'), findsOneWidget);
   });
 }

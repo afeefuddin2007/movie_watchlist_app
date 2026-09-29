@@ -1,17 +1,21 @@
-# movie_watchlist_app
+# CW-02 Movie Watchlist Undergraduate Package
 
-A new Flutter project.
+This source package meets the undergraduate app requirements shown in the rubric:
 
-## Getting Started
+- Scrollable HomeScreen with tappable movie cards
+- Navigator.push with a Movie object passed to DetailsScreen
+- Details screen with title, poster, cast, and synopsis
+- Four local poster assets declared in `pubspec.yaml`
+- Clean separation into `models`, `data`, and `screens`
 
-This project is a starting point for a Flutter application.
+## Run it on your Windows computer
 
-A few resources to get you started if this is your first Flutter project:
+1. Create a Flutter project named `cw02_movie_watchlist` in `D:\mad`.
+2. Replace its `lib` folder, `assets` folder, and `pubspec.yaml` with the matching items in this package.
+3. In the VS Code terminal, run `flutter pub get` and then `flutter run`.
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+## Undergrad submission checklist
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Push this project to GitHub with several meaningful commits.
+- Build and submit the release APK: `flutter build apk --release`.
+- Submit the GitHub repository link and any files or screenshots your instructor's submission page asks for.
